@@ -16,5 +16,6 @@
     <string name="textResultDog">Imagina que tu perro nació el mismo año y en el mismo día que tu, entonces esa es la edad que tendrías si fueras un perrito 🐕. </string>
     <string name="textResultCat">Si fueras un gattito tu vida resulta ser más corta... así que vive al maximo como los gatos 🐈</string>
     <string name="inputAge">Ingresa tu edad</string>
-    <string name="share" translatable="false">Compartir</string>
+    <string name="share">Compartir</string>
+    <string name="welcomeSplash">Bienvenido</string>
 </resources>

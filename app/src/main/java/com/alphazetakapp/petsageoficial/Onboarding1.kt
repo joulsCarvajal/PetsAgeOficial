@@ -16,7 +16,7 @@ class Onboarding1 : AppCompatActivity() {
     }
 
     private fun abrir() {
-        val intent = Intent(this, SplashActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">Pets Age</string>
+    <string name="app_name" translatable="false">PetsAge</string>
     <string name="Your_age_Dog">Your age dog is %d years old</string>
     <string name="Your_age_Cat">Your age cat is %s years old</string>
     <string name="Your_age_Cat2">Your age cat is %d month(s)</string>
@@ -17,5 +17,7 @@
     <string name="textResultCat" translatable="false">If you were a kitten your life turns out to be shorter... so you live to the fullest like cats 🐈</string>
     <string name="inputAge">Fill your human age</string>
     <string name="share">Share</string>
+    <string name="welcomeSplash" translatable="false">Welcome</string>
+    <string name="firmaAlphaZetaKapp" translatable="false">Powered by Alphazetakapp</string>
 
 </resources>

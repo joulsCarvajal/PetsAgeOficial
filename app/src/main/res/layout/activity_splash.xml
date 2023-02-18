@@ -5,21 +5,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#F2A71B"
+    android:background="@color/screensplashcolor"
     tools:context=".SplashActivity">
 
     <TextView
-
+        android:id="@+id/titleSplash"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="120dp"
         android:layout_marginBottom="50dp"
-        android:text="Welcome To"
+        android:hint="@string/welcomeSplash"
+        android:textColorHint="#593936"
+        android:textStyle="bold"
+        android:textSize="24dp"
         android:typeface="serif"
         android:textColor="@color/cafe"
         android:layout_gravity="center_horizontal"
-        android:textSize="30sp"
-        android:textStyle="bold"
         />
 
     <ImageView
@@ -50,10 +51,10 @@
         android:layout_below="@+id/power"
         android:gravity="center_horizontal"
         android:padding="6dp"
-        android:text="Powered by AlphaZetaKapp"
+        android:text="@string/firmaAlphaZetaKapp"
         android:textColor="@color/cafe"
         android:textSize="15sp"
-        android:textStyle="normal"
+        android:textStyle="bold"
         android:layout_marginTop="100dp"/>
 
 </LinearLayout>

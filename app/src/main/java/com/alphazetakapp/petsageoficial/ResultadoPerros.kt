@@ -71,7 +71,7 @@ class ResultadoPerros : AppCompatActivity() {
         tv1ResultDog.text = "$name"
     }
     private fun volver() {
-        val intent = Intent(this, SplashActivity::class.java)
+        val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
     }
     private fun initListeners() {
