@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="Your_age_Dog">Tu edad perruna es de %d años</string>
+    <string name="Your_age_Cat">Tu edad gatuna es de  %s años</string>
+    <string name="Your_age_Cat2">Tu edad gatuna es de %d mes(es)</string>
+    <string name="Your_age_Cat3">Tu edad gatuna es de %d mes</string>
+    <string name="Would_Insert_your_age">Deberás ingresar tu edad correcta</string>
+    <string name="insert_age">¿Cuántos años tienes?</string>
+    <string name="age" translatable="false">Tu edad</string>
+    <string name="calculate">Calcular</string>
+    <string name="backcAgain">Volver a empezar</string>
+    <string name="txttv2Onboarding1">PetAge utiliza una IA para saber cual sería tu edad si fueras tu perro, o tu gato.</string>
+    <string name="txttv1Onboarding1">¿Cual sería tu edad si fueras tu mascota?</string>
+    <string name="txtAveriguar">¿Qué edad quieres averiguar?</string>
+    <string name="selBtnCatOrDog">Debe seleccionar alguno de los dos botones</string>
+    <string name="textResultDog">Imagina que tu perro nació el mismo año y en el mismo día que tu, entonces esa es la edad que tendrías si fueras un perrito 🐕. </string>
+    <string name="textResultCat">Si fueras un gattito tu vida resulta ser más corta... así que vive al maximo como los gatos 🐈</string>
+    <string name="inputAge">Ingresa tu edad</string>
+    <string name="share" translatable="false">Compartir</string>
+</resources>

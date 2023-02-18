@@ -1,3 +1,21 @@
 <resources>
-    <string name="app_name">petsageoficial</string>
+    <string name="app_name" translatable="false">Pets Age</string>
+    <string name="Your_age_Dog">Your age dog is %d years old</string>
+    <string name="Your_age_Cat">Your age cat is %s years old</string>
+    <string name="Your_age_Cat2">Your age cat is %d month(s)</string>
+    <string name="Your_age_Cat3">Your age cat is %d month</string>
+    <string name="Would_Insert_your_age">You must insert your age value</string>
+    <string name="insert_age">How old are you?</string>
+    <string name="age">Your age</string>
+    <string name="calculate">Calculate</string>
+    <string name="backcAgain" translatable="false">Back Again</string>
+    <string name="txttv2Onboarding1">PetAge uses an AI to know what your age would be if you were your dog, or your cat.</string>
+    <string name="txttv1Onboarding1">How old would you be if you were your pet?</string>
+    <string name="txtAveriguar">How old do you want to find out?</string>
+    <string name="selBtnCatOrDog" translatable="false">You must select one of the two buttons</string>
+    <string name="textResultDog" translatable="false">Imagine that your dog was born the same year and on the same day as you, so that is the age you would be if you were a puppy 🐕.</string>
+    <string name="textResultCat" translatable="false">If you were a kitten your life turns out to be shorter... so you live to the fullest like cats 🐈</string>
+    <string name="inputAge">Fill your human age</string>
+    <string name="share">Share</string>
+
 </resources>

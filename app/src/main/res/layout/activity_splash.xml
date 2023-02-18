@@ -50,7 +50,7 @@
         android:layout_below="@+id/power"
         android:gravity="center_horizontal"
         android:padding="6dp"
-        android:text="Powered by SNA Tech"
+        android:text="Powered by AlphaZetaKapp"
         android:textColor="@color/cafe"
         android:textSize="15sp"
         android:textStyle="normal"
