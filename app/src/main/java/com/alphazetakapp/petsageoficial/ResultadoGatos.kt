@@ -52,7 +52,7 @@ class ResultadoGatos : AppCompatActivity() {
         outputStream.flush()
         outputStream.close()
         //val URI = FileProvider.getUriForFile(applicationContext, "com.alphazetakapp.agepetsofficial.fileprovider",imagefile )
-        val URI = FileProvider.getUriForFile(this, "com.alphazetakapp.petsageoficial.fileprovider",imagefile )
+        val URI = FileProvider.getUriForFile(this, "com.alphazetakapp.agepetsofficial.fileprovider",imagefile )
         //val URI = Uri.parse(ruta_dir_externo.toUri().toString())
 
 ///////////////
@@ -60,12 +60,13 @@ class ResultadoGatos : AppCompatActivity() {
         intentshare.action = Intent.ACTION_SEND
         intentshare.putExtra(Intent.EXTRA_STREAM, URI)
         intentshare.type = "image/*"
-        intentshare.putExtra(Intent.EXTRA_TEXT,"http://play.google.com/store/apps/details?id=com.alphazethakapp.agepets")
+        intentshare.putExtra(Intent.EXTRA_TEXT,"https://play.google.com/store/apps/details?id=com.alphazetakapp.agepetsofficial")
         intentshare.type = "text/plain"
 
         val shareIntent = Intent.createChooser(intentshare, null)
         startActivity(shareIntent)
         initLoadAds()
+
     }
 
     private fun getAndShowResult(){
