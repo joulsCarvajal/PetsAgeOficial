@@ -29,6 +29,7 @@ class ResultadoGatos : AppCompatActivity() {
         btnBackCat.setOnClickListener { volver() }
         btnsharecat.setOnClickListener{
             interstitial?.show(this)
+            //sharecat()
         }
     }
     private fun sharecat() {
@@ -73,6 +74,7 @@ class ResultadoGatos : AppCompatActivity() {
         val bundle = intent.extras
         val name = bundle?.get("age_cat")
         tv1ResultCat.text = "$name"
+        initLoadAds()
     }
 
     private fun volver() {

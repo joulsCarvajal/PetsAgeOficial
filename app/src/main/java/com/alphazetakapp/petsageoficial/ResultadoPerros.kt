@@ -66,6 +66,7 @@ class ResultadoPerros : AppCompatActivity() {
         val bundle = intent.extras
         val name = bundle?.get("age_dog")
         tv1ResultDog.text = "$name"
+        initLoadAds()
     }
     private fun returnBack() {
         val intent = Intent(this, MainActivity::class.java)
