@@ -24,15 +24,16 @@ import java.util.*
 
 class ResultadoPerros : AppCompatActivity() {
 
-    private var interstitial: InterstitialAd? = null
+    //private var interstitial: InterstitialAd? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado_perros)
-        initLoadAds()
+        //initLoadAds()
         getAndShowResult()
         btnBackDog.setOnClickListener { returnBack() }
         btnsharedog.setOnClickListener{
-            interstitial?.show(this)
+            //interstitial?.show(this)
+            sharedog()
         }
     }
 
@@ -59,20 +60,21 @@ class ResultadoPerros : AppCompatActivity() {
         }
         val chooserIntent = Intent.createChooser(shareIntent, null)
         startActivity(chooserIntent)
-        initLoadAds()
+        //initLoadAds()
     }
 
     private fun getAndShowResult(){
         val bundle = intent.extras
         val name = bundle?.get("age_dog")
         tv1ResultDog.text = "$name"
-        initLoadAds()
+        //initLoadAds()
     }
     private fun returnBack() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        finish()
     }
-    private fun initListeners() {
+    /*private fun initListeners() {
         interstitial?.fullScreenContentCallback = object : FullScreenContentCallback(){
             override fun onAdShowedFullScreenContent() {
                 interstitial = null
@@ -85,10 +87,10 @@ class ResultadoPerros : AppCompatActivity() {
                 interstitial = null
             }
         }
-    }
-    private fun initLoadAds() {
+    }*/
+    /*private fun initLoadAds() {
         var adRequest: AdRequest = AdRequest.Builder().build()
-        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
+        InterstitialAd.load(this, "ca-app-pub-7874686337995143/7519334115", adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(interstitialAd: InterstitialAd) {
                     interstitial = interstitialAd
@@ -99,5 +101,5 @@ class ResultadoPerros : AppCompatActivity() {
                     sharedog()
                 }
             })
-    }
+    }*/
 }

@@ -20,16 +20,16 @@ import java.util.*
 
 class ResultadoGatos : AppCompatActivity() {
 
-    private var interstitial: InterstitialAd? = null
+    //private var interstitial: InterstitialAd? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_resultado_gatos)
-        initLoadAds()
+        //initLoadAds()
         getAndShowResult()
-        btnBackCat.setOnClickListener { volver() }
+        btnBackCat.setOnClickListener { returnBack() }
         btnsharecat.setOnClickListener{
-            interstitial?.show(this)
-            //sharecat()
+            //interstitial?.show(this)
+            sharecat()
         }
     }
     private fun sharecat() {
@@ -66,7 +66,7 @@ class ResultadoGatos : AppCompatActivity() {
 
         val shareIntent = Intent.createChooser(intentshare, null)
         startActivity(shareIntent)
-        initLoadAds()
+        //initLoadAds()
 
     }
 
@@ -74,14 +74,15 @@ class ResultadoGatos : AppCompatActivity() {
         val bundle = intent.extras
         val name = bundle?.get("age_cat")
         tv1ResultCat.text = "$name"
-        initLoadAds()
+        //initLoadAds()
     }
 
-    private fun volver() {
+    private fun returnBack() {
         val intent = Intent(this, MainActivity::class.java)
         startActivity(intent)
+        finish()
     }
-    private fun initListeners() {
+    /*private fun initListeners() {
         interstitial?.fullScreenContentCallback = object : FullScreenContentCallback(){
             override fun onAdShowedFullScreenContent() {
                 interstitial = null
@@ -94,10 +95,10 @@ class ResultadoGatos : AppCompatActivity() {
                 interstitial = null
             }
         }
-    }
-    private fun initLoadAds() {
+    }*/
+    /*private fun initLoadAds() {
         var adRequest: AdRequest = AdRequest.Builder().build()
-        InterstitialAd.load(this, "ca-app-pub-3940256099942544/1033173712", adRequest,
+        InterstitialAd.load(this, "ca-app-pub-7874686337995143/7519334115", adRequest,
             object : InterstitialAdLoadCallback() {
                 override fun onAdLoaded(interstitialAd: InterstitialAd) {
                     interstitial = interstitialAd
@@ -108,5 +109,5 @@ class ResultadoGatos : AppCompatActivity() {
                     sharecat()
                 }
             })
-    }
+    }*/
 }
