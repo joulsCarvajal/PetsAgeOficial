@@ -11,6 +11,8 @@ import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.core.content.FileProvider
+import com.alphazetakapp.petsageoficial.databinding.ActivityResultadoGatosBinding
+import com.alphazetakapp.petsageoficial.databinding.ActivityResultadoPerrosBinding
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
@@ -25,17 +27,27 @@ import java.util.*
 class ResultadoPerros : AppCompatActivity() {
 
     //private var interstitial: InterstitialAd? = null
+    private lateinit var binding: ActivityResultadoPerrosBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_resultado_perros)
-        //initLoadAds()
+        binding = ActivityResultadoPerrosBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        /*setContentView(R.layout.activity_resultado_perros)*/
+        initLoadAds()
+
         getAndShowResult()
-        btnBackDog.setOnClickListener { returnBack() }
-        btnsharedog.setOnClickListener{
+        binding.btnBackDog.setOnClickListener { returnBack() }
+        binding.btnsharedog.setOnClickListener{
             //interstitial?.show(this)
             sharedog()
         }
     }
+
+    private fun initLoadAds() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adViewResultDog.loadAd(adRequest)
+    }
+
 
     private fun sharedog() {
         val customCanvasView = findViewById<LinearLayout>(R.id.framedog)

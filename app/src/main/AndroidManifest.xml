@@ -10,6 +10,7 @@
         android:fullBackupContent="@xml/backup_rules"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:name=".PetAgeAddApp"
         android:supportsRtl="true"
         android:theme="@style/Theme.Petsageoficial"
         tools:targetApi="31">
@@ -71,7 +72,8 @@
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-1415098456146639~8767226087"/> <!--Este es el de PRUEBA-->
+            <!--android:value="ca-app-pub-1415098456146639~8767226087"/>--> <!--Este es el ID App REAL OJO-->
 
     </application>
 

@@ -5,15 +5,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.alphazetakapp.petsageoficial.databinding.ActivityMainBinding
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlin.math.roundToInt
 
 class MainActivity : AppCompatActivity() {
+    lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
-
         super.onCreate(savedInstanceState)
-        val binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        initLoadAds()
+
 
         binding.buttonCalcular.setOnClickListener {
             val ageString: String = binding.editText1.text.toString().ifEmpty { "0" } //Asigno el valor ingresado del evento
@@ -66,6 +72,11 @@ class MainActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    private fun initLoadAds() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adView.loadAd(adRequest)
     }
 
     fun openDogR(ageInt: Int) {

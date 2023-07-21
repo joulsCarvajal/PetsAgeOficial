@@ -108,4 +108,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adViewResultDog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        ads:layout_constraintVertical_bias="0.001"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-1415098456146639/6830633354">
+        <!--ads:adUnitId="ca-app-pub-3940256099942544/6300978111"> &lt;!&ndash;Este es el de prueba&ndash;&gt;-->
+        <!--ads:adUnitId="ca-app-pub-1415098456146639/6830633354" Este sería el oficial de la APP-->
+    </com.google.android.gms.ads.AdView>
 </androidx.constraintlayout.widget.ConstraintLayout>

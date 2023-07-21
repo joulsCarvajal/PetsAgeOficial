@@ -8,30 +8,41 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.LinearLayout
 import androidx.core.content.FileProvider
+import com.alphazetakapp.petsageoficial.databinding.ActivityResultadoGatosBinding
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_resultado_gatos.*
 import java.io.File
 import java.io.FileOutputStream
 import java.util.*
 
 class ResultadoGatos : AppCompatActivity() {
-
-    //private var interstitial: InterstitialAd? = null
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_resultado_gatos)
-        //initLoadAds()
-        getAndShowResult()
-        btnBackCat.setOnClickListener { returnBack() }
-        btnsharecat.setOnClickListener{
-            //interstitial?.show(this)
-            sharecat()
+        //private var interstitial: InterstitialAd? = null
+    private lateinit var binding: ActivityResultadoGatosBinding
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            binding = ActivityResultadoGatosBinding.inflate(layoutInflater)
+            setContentView(binding.root)
+            /*setContentView(R.layout.activity_resultado_gatos)*/
+            initLoadAds()
+            getAndShowResult()
+            binding.btnBackCat.setOnClickListener { returnBack() }
+            binding.btnsharecat.setOnClickListener{
+                //interstitial?.show(this)
+                sharecat()
+            }
         }
+
+    private fun initLoadAds() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adViewResultCat.loadAd(adRequest)
     }
+
     private fun sharecat() {
 
         val canvas_custom = findViewById<LinearLayout>(R.id.framecat)

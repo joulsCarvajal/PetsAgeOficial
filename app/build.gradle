@@ -14,8 +14,8 @@ android {
         applicationId "com.alphazetakapp.petsageoficial"
         minSdk 24
         targetSdk 33
-        versionCode 2
-        versionName "1.0.2"
+        versionCode 3
+        versionName "1.0.3"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -49,7 +49,7 @@ dependencies {
     implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
     implementation 'androidx.core:core-splashscreen:1.0.0-rc01'
 
-    implementation 'com.google.android.gms:play-services-ads-lite:20.1.0'
+    implementation 'com.google.android.gms:play-services-ads:22.2.0'
 
     constraints {
         implementation('androidx.work:work-runtime:2.7.0-alpha05') {
